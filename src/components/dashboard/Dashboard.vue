@@ -1,75 +1,34 @@
 <template>
-  <v-app id="inspire" dark>
-      <v-navigation-drawer
-        clipped
-        fixed
-        class="orange accent-2"
-        v-model="drawer"
-        app
-      >
-        <v-list dense>
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>dashboard</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Dashboard</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>settings</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Settings</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <v-toolbar app fixed clipped-left class="orange accent-2">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-toolbar-title>M/S. Abul Monsur Khan</v-toolbar-title>
-      </v-toolbar>
-      <v-content>
-        <v-container fluid>
-          <v-layout justify-center align-center>
-            <v-flex shrink>
-               <!-- search -->
-               <v-card dark class="pt-3">
-                   <v-layout row wrap>
-                       <v-flex xs12 sm4 class="px-2">
-                           <v-btn @click="" class="orange accent-2" dark>
-                               New User
-                               <v-icon right dark>add</v-icon>
-                           </v-btn>
-                       </v-flex>
-                       <v-flex xs12 sm8 class="px-2 text-xs-center text-sm-right">
-                           <v-btn @click="" class="orange accent-2" dark>
-                               Manage Groups <v-icon right dark>group</v-icon>
-                           </v-btn>
-                           <v-btn @click="" class="orange accent-2" dark>
-                               Manage Permissions <v-icon right dark>vpn_key</v-icon>
-                           </v-btn>
-                       </v-flex>
-                       <v-flex class="my-2"><v-divider></v-divider></v-flex>
-                       <v-spacer></v-spacer>
-                       <v-flex class="px-2">
-                           <v-text-field prepend-icon="search" dark color="orange accent-2" label="Filter By Name"></v-text-field>
-                       </v-flex>
-                       <v-flex class="px-2">
-                           <v-text-field prepend-icon="search" dark color="orange accent-2" label="Filter By Email"></v-text-field>
-                       </v-flex>
-                   </v-layout>
-               </v-card>
-               <!-- /search -->
-            </v-flex>
+  <v-flex shrink>
+      <!-- search -->
+      <v-card dark class="pt-3">
+          <v-layout row wrap>
+              <v-flex xs12 sm4 class="px-2">
+                  <v-btn @click="" class="orange accent-2" dark>
+                      New User
+                      <v-icon right dark>add</v-icon>
+                  </v-btn>
+              </v-flex>
+              <v-flex xs12 sm8 class="px-2 text-xs-center text-sm-right">
+                  <v-btn @click="" class="orange accent-2" dark>
+                      Manage Groups <v-icon right dark>group</v-icon>
+                  </v-btn>
+                  <v-btn @click="" class="orange accent-2" dark>
+                      Manage Permissions <v-icon right dark>vpn_key</v-icon>
+                  </v-btn>
+              </v-flex>
+              <v-flex class="my-2"><v-divider></v-divider></v-flex>
+              <v-spacer></v-spacer>
+              <v-flex class="px-2">
+                  <v-text-field prepend-icon="search" dark color="orange accent-2" label="Filter By Name"></v-text-field>
+              </v-flex>
+              <v-flex class="px-2">
+                  <v-text-field prepend-icon="search" dark color="orange accent-2" label="Filter By Email"></v-text-field>
+              </v-flex>
           </v-layout>
-        </v-container>
-      </v-content>
-      <v-footer app fixed>
-        <span>&copy; 2017</span>
-      </v-footer>
-  </v-app>
+      </v-card>
+      <!-- /search -->
+  </v-flex>
 </template>
 
 <script>
